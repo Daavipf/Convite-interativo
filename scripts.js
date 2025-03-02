@@ -12,12 +12,15 @@ function switchContent() {
   }
 }
 
-window.onload = function () {
-  const audioPlayer = document.getElementById("audio-player");
-  audioPlayer.play().catch((error) => {
-    console.error("Erro ao reproduzir o áudio:", error);
+document
+  .getElementById("play-audio-button")
+  .addEventListener("click", function () {
+    const audioPlayer = document.getElementById("audio-player");
+    audioPlayer.play().catch((error) => {
+      console.error("Erro ao reproduzir o áudio:", error);
+      alert("Erro ao reproduzir o áudio. Tente novamente.");
+    });
   });
-};
 
 // Adiciona o evento de clique ao link de "Presentes"
 document
