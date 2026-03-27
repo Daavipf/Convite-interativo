@@ -1,16 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
+@import url('https://fonts.googleapis.com/css2?family=Corinthia:wght@400;700&display=swap');
+
+
 body {
-  padding: 0;
+  padding: 16px;
   box-sizing: border-box;
   margin: 0;
   text-decoration: none;
-  background-image: url("./Heitor\ 10\ Anos.png");
+  background-image: url("./BG.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 100vh;
-  font-family: "Montserrat", serif;
+  height: 100dvh;
+  font-family: "Corinthia", cursive;
 }
 
 .bg {
@@ -18,8 +21,8 @@ body {
   height: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-start;
+  justify-content: space-between;
 }
 
 h2,
@@ -90,12 +93,18 @@ img {
   animation: slideUp 1s ease-in-out;
 }
 
+.pulsating-text{
+  color: #FFF;
+  font-size: 38px;
+  rotate: -15deg;
+  animation: pulse 2s infinite;
+}
+
 .button-container {
-  padding: 16px;
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  gap: 36px;
+  justify-content: space-between;
 }
 
 .button h3 {
@@ -106,16 +115,22 @@ img {
   animation: slideRight 1s ease-in-out;
 }
 
+.button-bg{
+  padding: 2px;
+  border-radius: 9999px;
+  background: linear-gradient(#ff7979, #550000);
+}
+
 .button {
+  padding: 6px;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 0;
-}
-
-.button img {
-  margin-top: -24px;
-  animation: fadeIn 1s ease-in-out, pulse 2s infinite;
+  border-radius: 9999px;
+  background: linear-gradient(#4d4d4d, #131313);
+  border: transparent;
+  animation: fadeIn 1s ease-in-out;
 }
 
 .gift-container {
