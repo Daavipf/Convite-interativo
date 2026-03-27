@@ -105,14 +105,26 @@ img {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  align-items: center;
 }
 
-.button h3 {
+.audio-button{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+}
+
+.audio-button h3 {
   background-color: black;
+  margin-top: -12px;
   padding: 12px;
   border-radius: 8px;
+  font-family: 'Montserrat', serif;
+  font-weight: 400;
+  font-size: 16px;
   z-index: 1;
-  animation: slideRight 1s ease-in-out;
 }
 
 .button-bg{
