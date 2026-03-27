@@ -12,28 +12,33 @@ function switchContent() {
   }
 }
 
-document
-  .getElementById("play-audio")
-  .addEventListener("click", function () {
-    const audioPlayer = document.getElementById("audio-player");
-    audioPlayer.play().catch((error) => {
-      console.error("Erro ao reproduzir o áudio:", error);
-      alert("Erro ao reproduzir o áudio. Tente novamente.");
-    });
-  });
+window.addEventListener('click', () => {
+    const audio = document.querySelector('audio');
+    audio.play();
+}, { once: true });
 
-// Adiciona o evento de clique ao link de "Presentes"
-document
-  .getElementById("gifts-link")
-  .addEventListener("click", function (event) {
-    event.preventDefault(); // Impede o comportamento padrão do link
-    switchContent();
-  });
+// document
+//   .getElementById("play-audio")
+//   .addEventListener("click", function () {
+//     const audioPlayer = document.getElementById("audio-player");
+//     audioPlayer.play().catch((error) => {
+//       console.error("Erro ao reproduzir o áudio:", error);
+//       alert("Erro ao reproduzir o áudio. Tente novamente.");
+//     });
+//   });
 
-// Adiciona o evento de clique ao link de "Voltar"
-document
-  .getElementById("back-link")
-  .addEventListener("click", function (event) {
-    event.preventDefault(); // Impede o comportamento padrão do link
-    switchContent();
-  });
+// // Adiciona o evento de clique ao link de "Presentes"
+// document
+//   .getElementById("gifts-link")
+//   .addEventListener("click", function (event) {
+//     event.preventDefault(); // Impede o comportamento padrão do link
+//     switchContent();
+//   });
+
+// // Adiciona o evento de clique ao link de "Voltar"
+// document
+//   .getElementById("back-link")
+//   .addEventListener("click", function (event) {
+//     event.preventDefault(); // Impede o comportamento padrão do link
+//     switchContent();
+//   });
