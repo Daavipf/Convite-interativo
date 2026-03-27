@@ -13,7 +13,7 @@ function switchContent() {
 }
 
 document
-  .getElementById("play-audio-button")
+  .getElementById("play-audio")
   .addEventListener("click", function () {
     const audioPlayer = document.getElementById("audio-player");
     audioPlayer.play().catch((error) => {
